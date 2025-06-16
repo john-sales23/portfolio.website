@@ -24,17 +24,6 @@ section {
     margin-left: auto;
     margin-left: auto;
 }
-.grid-container-small{
-    display: grid;
-    position: relative;
-    gap: 2em;
-    grid-template-columns: 20% 20% 20%;
-    grid-template-rows: max-content;
-    margin-left: auto;
-    margin-left: auto;  
-    justify-content: center;
-    margin: 5%;
-}
 hr{
     color: #ffffff;
     width: 80%;
@@ -115,12 +104,6 @@ section.about{
     background-attachment: fixed;
     background-size: 100%;
 }
-#background-img{
-    background-image: url(/images/background-splash-image\(1\).png);
-    background-position: center;
-    background-attachment: fixed;
-    background-size: 100%;
-}
 section.about p , div.about p{
     width: 60%;
     flex-direction: column;
@@ -192,19 +175,16 @@ div.grid:hover .middle-text{
 /*---Sketch Page---*/
 
 .sketch-page{
-    display: block;
+    display: grid;
     position: relative;
     gap: 2em;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: max-content;
-    width: 100%;
     margin-left: auto;
     margin-left: auto;
 }
 .sketch-page div{
     padding: 20px;
-    justify-content: center;
-    margin: auto;
 }
 .sketch-page div ul{
     margin-left: 15%;
@@ -216,27 +196,11 @@ div.grid:hover .middle-text{
 .sketch-spread{
     grid-column: 1 / span 2;
 }
-.prompts{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    justify-items: center;
-}
-.moodboard{
-    display: grid;
-    position: relative;
-    grid-template-columns: 40% 40%;
-}
-.moodboard img{
-    width: 100%;
-    border-style:solid;
-    border-width: 2em;
-    border-color: #f06157;
-}
 .variation{
     display: grid;
+    grid-column: 1 / span 2;
     grid-template-columns: 1fr 1fr 1fr;
     position: relative;
-    gap: 5%;
 }
 .variation div{
     width: 100%
@@ -245,23 +209,7 @@ div.grid:hover .middle-text{
 /*---Portfolio Page---*/
  
 div.portfolio-img{
-    display: grid;
-    grid-template-columns:  1fr 1fr;
-    margin-top: 5%;
-    margin-left: auto;
-    margin-right: auto;
-    width: 60%;
-    justify-items: center;
-    align-items: center;
-    gap: 5%;
-}
-.grid-container-small h3{
-    font-size: 100%;
-    padding: 0%;
-}
-.portfolio-img2{
     display: flex;
-    grid-template-columns:  1fr 1fr;
     margin-left: auto;
     margin-right: auto;
     width: 60%;
@@ -327,7 +275,7 @@ a.button1:hover{
     background-color: #f06157;
 }
 section.mockup{
-    display: block;
+    display: flex;
     margin-left: auto;
     margin-right: auto;
 }
@@ -392,7 +340,6 @@ h1{
     color: #6544f6;
     padding: 5px;
     margin-top: 40px;
-    margin-bottom: 40px;
 }
 h2{
     font-size: 32pt;
