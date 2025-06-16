@@ -99,7 +99,7 @@ section.splash h1{
 /*---About Section---*/
 
 section.about{
-    background-image: url(/images/background-splash-image\(1\).png);
+    background-image: url(/images/background-splash-image/(1/).png);
     background-position: center;
     background-attachment: fixed;
     background-size: 100%;
