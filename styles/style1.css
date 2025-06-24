@@ -4,9 +4,7 @@ body { /*whole page*/
     font-family: "IBM Plex Sans", sans-serif;
     background-color: black;
     color: #ffffff;
-    display: flex;
-
-    
+    display: flex; 
 }
 section {
     margin-bottom: 4em;
@@ -57,6 +55,11 @@ img{
 }
 
 /*---Header---*/
+
+header{
+    height: 7rem;
+}
+
 a{
     color: #ffffff;
     text-decoration: none;
@@ -64,10 +67,16 @@ a{
     font-size: 18pt;
     text-align: center;
 }
-ul.links a:hover, a:active{
+ul.links li:hover, a:active{
     background-color: #f06157;
 }
-
+.hamburger-menu input {
+    appearance: none;
+    padding: 0;
+    margin: 0;
+    outline: none;
+    pointer-events: none;
+}
 /*---Splash Section--*/
 
 section.splash{
@@ -110,13 +119,13 @@ section.splash h1{
 /*---About Section---*/
 
 section.about{
-    background-image: url(/images/background-splash-image.png);
+    background-image: url(../images/background-splash-image.png);
     background-position: center;
     background-attachment: fixed;
     background-size: 100%;
 }
 #background-img{
-    background-image: url(/images/background-splash-image.png);
+    background-image: url(../images/background-splash-image.png);
     background-position: center;
     background-attachment: fixed;
     background-size: 100%;
@@ -465,8 +474,8 @@ footer{
     position: fixed;
     bottom: 0;
     left: 0;
+    height: 7.5%;
     width: 100%;
-    flex: auto;
 }
 li.return-to-top{
     position: fixed;
@@ -501,7 +510,124 @@ li.return-to-top p{
     img.svg-img1{
         height: 375px;
     }
+
+    /*---Header---*/
+
+    .header-fixed{
+        position: fixed;
+        height: 15%;
+        width: 100%;
+        background-color: rgba(0, 0, 0, .75);
+        z-index: 2;
+    }
+
+    nav ul.links{
+        display: flex;
+        flex-direction: column;
+    }
+    *, *::after, *::before{
+        box-sizing: border-box;
+    }
+    :root {
+        --bar-width: 20%;
+        --bar-height: 15px;
+        --hamburger-gap: 16px;
+        --hamburger-margin: 18px;
+        --animation-timing: 200ms ease-in-out;
+        --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
+        --foreground: #1c3485;
+        --background: black;
+    }
+    .hamburger-menu {
+        --x-width:calc(var(--hamburger-height) * 1.41421356237);
+        width: 100%;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        gap: var(--hamburger-gap);
+        top: var(--hamburger-margin);
+        left: var(--hamburger-margin);
+        z-index: 2;
+        cursor: pointer;
+    }
     
+    .hamburger-menu:has(input:checked){
+        --foreground: black;
+        --background: #1c3485;
+    }
+
+    .hamburger-menu::before, .hamburger-menu input, .hamburger-menu::after{
+        content:"";
+        width: var(--bar-width);
+        height: var(--bar-height);
+        background-color: var(--foreground);
+        border-radius: 2000px;
+        transform-origin: left center;
+        transition: opacity var(--animation-timing), width var(--animation-timing),
+        rotate var(--animation-timing), translate var(--animation-timing),
+        background-color var(--animation-timing);
+    }
+    
+    .hamburger-menu input {
+        appearance: none;
+        padding: 0;
+        margin: 0;
+        outline: none;
+        pointer-events: none;
+    }
+    .hamburger-menu:has(input:checked)::before{
+        rotate: 45deg;
+        width: var(--x-width);
+        translate: 0 calc(var(--bar-height) / -2);
+    }
+    .hamburger-menu:has(input:checked)::after{
+        rotate: -45deg;
+        width: var(--x-width);
+        translate: 0 calc(var(--bar-height) / 2);
+
+    }
+    .hamburger-menu input:checked {
+        opacity: 0;
+        width: 0;
+    }
+    .sidebar nav{
+        transition: translate var(--animation-timing);
+        translate: -100%;
+        padding: .5rem 1rem;
+        padding-top: calc(var(--hamburger-height) + var(--hamburger-margin) + 1rem);
+        background-color: var(--foreground);
+        color: var(--background);
+        max-width: 10rem;
+        position: absolute;
+        min-height: 100vh;
+        z-index: 1;
+    }
+
+    .hamburger-menu:has(input:checked) + .sidebar nav{
+        translate: 0;
+    }
+    
+    /*
+    6/18/2025
+    Things to do:
+    -have appropriate links for linkedin, instagram, and x/twitter
+
+    /*---Splash---*/
+
+    div.splash-container img{
+        opacity: 0.3;
+    }
+    div.splash-container .middle-text{
+        opacity: 1;
+    }
+    /*---Portfolio Main Page--*/
+    div.grid img{
+    opacity: 0.3;
+    }
+    div.grid .middle-text{
+        opacity: 1;
+        border-color: transparent;
+    }
 
     /*---About Section---*/
 
@@ -516,6 +642,16 @@ li.return-to-top p{
     section.about p{
         width: 80%;
     }
+    
+    /*---Footer---*/
+
+   
+    li.return-to-top{
+        bottom: 10%;
+        background-color: #f06157;
+        clip-path: polygon(50% 0%, 100% 20%, 100% 100%, 0 100%, 0 20%);
+    }
+ 
 }
 @media (min-width: 1800px) {
     section.about{
