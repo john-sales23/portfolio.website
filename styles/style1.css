@@ -375,6 +375,12 @@ p {
     color: #ffffff;
     padding: 2em;
 }
+a h3{
+    font-size: 1em;
+}
+a p{
+    font-size: 1em;
+}
 .magicbox-header {
     font-family: "Inter", sans-serif;
     font-size: 3em;
