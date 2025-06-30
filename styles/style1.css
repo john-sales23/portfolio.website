@@ -16,22 +16,11 @@ section {
 .grid-container{
     display: grid;
     position: relative;
-    gap: 2em;
+    gap: 1em;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: max-content;
     margin-left: auto;
     margin-left: auto;
-}
-.grid-container-small{
-    display: grid;
-    position: relative;
-    gap: 2em;
-    grid-template-columns: 20% 20% 20%;
-    grid-template-rows: max-content;
-    margin-left: auto;
-    margin-left: auto;  
-    justify-content: center;
-    margin: 5%;
 }
 hr{
     color: #ffffff;
@@ -55,16 +44,11 @@ img{
 }
 
 /*---Header---*/
-
-header{
-    height: 7rem;
-}
-
 a{
     color: #ffffff;
     text-decoration: none;
     display: inline-block;
-    font-size: 18pt;
+    font-size: 1.5em;
     text-align: center;
 }
 ul.links li:hover, a:active{
@@ -122,13 +106,13 @@ section.about{
     background-image: url(../images/background-splash-image.png);
     background-position: center;
     background-attachment: fixed;
-    background-size: 100%;
+    background-size: cover;
 }
 #background-img{
     background-image: url(../images/background-splash-image.png);
     background-position: center;
     background-attachment: fixed;
-    background-size: 100%;
+    background-size: cover;
 }
 section.about p , div.about p{
     width: 60%;
@@ -200,56 +184,6 @@ div.grid:hover .middle-text{
 
 /*---Sketch Page---*/
 
-.sketch-page{
-    display: block;
-    position: relative;
-    gap: 2em;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: max-content;
-    width: 100%;
-    margin-left: auto;
-    margin-left: auto;
-}
-.sketch-page div{
-    padding: 20px;
-    justify-content: center;
-    margin: auto;
-}
-.sketch-page div ul{
-    margin-left: 15%;
-    margin-right: 15%;
-}
-.sketch-page img{
-    width: 100%;
-}
-.sketch-spread{
-    grid-column: 1 / span 2;
-}
-.prompts{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    justify-items: center;
-}
-.moodboard{
-    display: grid;
-    position: relative;
-    grid-template-columns: 40% 40%;
-}
-.moodboard img{
-    width: 100%;
-    border-style:solid;
-    border-width: 2em;
-    border-color: #f06157;
-}
-.variation{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    position: relative;
-    gap: 5%;
-}
-.variation div{
-    width: 100%
-}
 
 /*---Portfolio Page---*/
  
@@ -257,16 +191,13 @@ div.portfolio-img{
     display: grid;
     grid-template-columns:  1fr 1fr;
     margin-top: 5%;
+    margin-bottom: 10%;
     margin-left: auto;
     margin-right: auto;
     width: 60%;
     justify-items: center;
     align-items: center;
     gap: 5%;
-}
-.grid-container-small h3{
-    font-size: 100%;
-    padding: 0%;
 }
 .portfolio-img2{
     display: flex;
@@ -276,6 +207,9 @@ div.portfolio-img{
     width: 60%;
     justify-items: center;
     align-items: center;
+}
+.portfolio-img2 img{
+    border-radius: 40px;
 }
 .portfolio img{
     width: 100%;
@@ -293,7 +227,7 @@ div.portfolio-img{
     width: 100%;
 }
 .grid-process img{
-    width: 100%;
+    width: 90%;
 }
 .grid-process:hover{
     background-color: black;
@@ -327,9 +261,7 @@ a.button1{
     background-color: #1c3485;
     color: white;
     text-align: center;
-    padding: 2em;
-    width: 20%;
-    height: 10%;
+    margin: auto;
     justify-self: center;
 }
 a.button1:hover{
@@ -357,6 +289,7 @@ section.mockup{
 .grid-container-mockup img{
     width: 100%;
     height: 100%;
+    object-fit: cover;
 }
 .grid-container-mockup div:hover{
     border-style: solid;
@@ -364,16 +297,19 @@ section.mockup{
     border-color: #f06157;
 }
 ul.portfolio-tools{
-    display: block;
+    display: flex;
+    width: 70%;
     margin-top: 20px;
-    margin-left: 16%;
+    margin-right: auto;
+    margin-left: auto;
+    
 }
 .portfolio-tools li{
-    display: inline-block;
+    display: flex;
     text-align: center;
-    padding-left: 5%;
-    padding-right: 5%;
-    padding-top: 2em;
+    padding: 2%;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 /*---Client---*/
@@ -394,7 +330,7 @@ ul.portfolio-tools{
 /*---Text---*/
 
 h1{
-    font-size: 60pt;
+    font-size: 5em;
     font-weight: 500;
     font-variant: small-caps;
     text-align: center;
@@ -404,21 +340,21 @@ h1{
     margin-bottom: 40px;
 }
 h2{
-    font-size: 32pt;
+    font-size: 2.67em;
     font-weight: 500;
     text-align: center;
     color: #ffffff;
     padding: 20px;
 }
 h3{
-    font-size: 24pt;
+    font-size: 2em;
     font-weight: 500;
     text-align: center;
     color: #ffffff;
     padding: 20px;
 }
 h4{
-    font-size: 18pt;
+    font-size: 1.5em;
     font-weight: 500;
     text-align: center;
     color: #6544f6;
@@ -434,14 +370,20 @@ h4{
     text-align: center;
 }
 p {
-    font-size: 16pt;
+    font-size: 1.3em;
     font-weight: 400;
     color: #ffffff;
     padding: 2em;
 }
+a h3{
+    font-size: 1em;
+}
+a p{
+    font-size: 1em;
+}
 .magicbox-header {
     font-family: "Inter", sans-serif;
-    font-size: 36pt;
+    font-size: 3em;
     font-weight: 700;
     text-align: center;
     color: white;
@@ -449,14 +391,14 @@ p {
     margin-top: 40px;
 }
 .magicbox-subhead{
-    font-size: 24pt;
+    font-size: 2em;
     font-weight: 900;
     text-align: center;
     color: white;
     padding: 20px;
 }
 .magicbox-bodycopy{
-    font-size: 16pt;
+    font-size: 1.34em;
     font-weight: 400;
     color: white;
     padding: 2em;
@@ -464,7 +406,7 @@ p {
 }
 .job-titles{
     color: #f06157;
-    font-size: 20pt;
+    font-size: 1.67em;
 }
 
 /*---Footer---*/
@@ -474,12 +416,20 @@ footer{
     position: fixed;
     bottom: 0;
     left: 0;
-    height: 7.5%;
+    height: 8vh;
     width: 100%;
+}
+.cta{
+    width: auto;
+    height: 80%;
+}
+.cta img{
+    max-height: 7vh;
+    object-fit: contain;
 }
 li.return-to-top{
     position: fixed;
-    bottom: 0;
+    bottom: 1%;
     right: 0;
 }
 li.return-to-top p{
@@ -510,12 +460,13 @@ li.return-to-top p{
     img.svg-img1{
         height: 375px;
     }
+   
 
     /*---Header---*/
 
     .header-fixed{
         position: fixed;
-        height: 15%;
+        height: 10%;
         width: 100%;
         background-color: rgba(0, 0, 0, .75);
         z-index: 2;
@@ -613,7 +564,14 @@ li.return-to-top p{
     -have appropriate links for linkedin, instagram, and x/twitter
 
     /*---Splash---*/
-
+    .splash-container{
+        height: 100vh;
+    }
+    .splash-container img{
+        height: 100%;
+        object-position: 10% 100%;
+        object-fit: cover;
+    }
     div.splash-container img{
         opacity: 0.3;
     }
@@ -621,12 +579,24 @@ li.return-to-top p{
         opacity: 1;
     }
     /*---Portfolio Main Page--*/
+
+    div.grid:hover img{
+    opacity: 1;
+    }
     div.grid img{
-    opacity: 0.3;
+    opacity: 1;
     }
     div.grid .middle-text{
         opacity: 1;
-        border-color: transparent;
+        background-color: #6544f6;
+        top: 90%;
+    }
+    div.middle-text h3{
+    font-size: 1.5em;
+    font-weight: 500;
+    text-align: center;
+    color: #ffffff;
+    padding: 0;
     }
 
     /*---About Section---*/
@@ -643,9 +613,35 @@ li.return-to-top p{
         width: 80%;
     }
     
-    /*---Footer---*/
+    /*---Portfolio Page---*/
 
-   
+    div.portfolio-img{
+        grid-template-columns: 1fr;
+    }
+    .grid-container-mockup{
+        grid-template-columns: 1fr ;
+    }
+    section.mockup{
+        padding-bottom: 10%;
+    }
+    .portfolio-tools{
+        flex-direction: column;
+    }
+    .grid-process:hover img{
+        opacity: 1;
+    }
+    .grid-process .middle-text{
+        opacity: 1;
+        border-color: transparent;
+        background-color: #6544f6;
+        top: 90%;
+    }
+
+
+    /*---Footer---*/
+    footer{
+        height: 8vh;
+    }
     li.return-to-top{
         bottom: 10%;
         background-color: #f06157;
