@@ -1,5 +1,8 @@
 /*Custom CSS Style John Sales */
 
+html{
+    font-size: 16pt;
+}
 body { /*whole page*/
     font-family: "IBM Plex Sans", sans-serif;
     background-color: black;
@@ -48,7 +51,7 @@ a{
     color: #ffffff;
     text-decoration: none;
     display: inline-block;
-    font-size: 1.5em;
+    font-size: 1.5rem;
     text-align: center;
 }
 ul.links li:hover, a:active{
@@ -186,7 +189,14 @@ div.grid:hover .middle-text{
 
 
 /*---Portfolio Page---*/
- 
+section.portfolio{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
 div.portfolio-img{
     display: grid;
     grid-template-columns:  1fr 1fr;
@@ -330,7 +340,7 @@ ul.portfolio-tools{
 /*---Text---*/
 
 h1{
-    font-size: 5em;
+    font-size: 5rem;
     font-weight: 500;
     font-variant: small-caps;
     text-align: center;
@@ -340,21 +350,21 @@ h1{
     margin-bottom: 40px;
 }
 h2{
-    font-size: 2.67em;
+    font-size: 2.67rem;
     font-weight: 500;
     text-align: center;
     color: #ffffff;
     padding: 20px;
 }
 h3{
-    font-size: 2em;
+    font-size: 2rem;
     font-weight: 500;
     text-align: center;
     color: #ffffff;
     padding: 20px;
 }
 h4{
-    font-size: 1.5em;
+    font-size: 1.5rem;
     font-weight: 500;
     text-align: center;
     color: #6544f6;
@@ -370,20 +380,20 @@ h4{
     text-align: center;
 }
 p {
-    font-size: 1em;
+    font-size: 1rem;
     font-weight: 400;
     color: #ffffff;
     padding: 2em;
 }
 a h3{
-    font-size: 1em;
+    font-size: 1rem;
 }
 a p{
-    font-size: .7em;
+    font-size: 1rem;
 }
 .magicbox-header {
     font-family: "Inter", sans-serif;
-    font-size: 3em;
+    font-size: 3rem;
     font-weight: 700;
     text-align: center;
     color: white;
@@ -391,14 +401,14 @@ a p{
     margin-top: 40px;
 }
 .magicbox-subhead{
-    font-size: 2em;
+    font-size: 2rem;
     font-weight: 900;
     text-align: center;
     color: white;
     padding: 20px;
 }
 .magicbox-bodycopy{
-    font-size: 1.34em;
+    font-size: 1.34rem;
     font-weight: 400;
     color: white;
     padding: 2em;
@@ -406,7 +416,7 @@ a p{
 }
 .job-titles{
     color: #f06157;
-    font-size: 1.67em;
+    font-size: 1.67rem;
 }
 
 /*---Footer---*/
@@ -433,7 +443,7 @@ li.return-to-top{
     right: 0;
 }
 li.return-to-top p{
-    padding: .75em;
+    padding: .4em;
 }
 
 /*---Responsive---*/
@@ -466,7 +476,7 @@ li.return-to-top p{
 
     .header-fixed{
         position: fixed;
-        height: 10%;
+        height: 15vh;
         width: 100%;
         background-color: rgba(0, 0, 0, .75);
         z-index: 2;
@@ -480,10 +490,10 @@ li.return-to-top p{
         box-sizing: border-box;
     }
     :root {
-        --bar-width: 20%;
-        --bar-height: 15px;
-        --hamburger-gap: 16px;
-        --hamburger-margin: 18px;
+        --bar-width: 5rem;
+        --bar-height: 1rem;
+        --hamburger-gap: .5rem;
+        --hamburger-margin: 1rem;
         --animation-timing: 200ms ease-in-out;
         --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
         --foreground: #1c3485;
@@ -592,7 +602,7 @@ li.return-to-top p{
         top: 90%;
     }
     div.middle-text h3{
-    font-size: 1.5em;
+    font-size: 1.5rem;
     font-weight: 500;
     text-align: center;
     color: #ffffff;
